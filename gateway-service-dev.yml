@@ -9,7 +9,6 @@ spring:
           predicates:
             - Path=/book/**
           filters:
-            - RewritePath=/book/(?<remaining>.*), /${remaining}
             - AuthenticationFilter
 
 
@@ -18,7 +17,6 @@ spring:
           predicates:
             - Path=/category/**
           filters:
-            - RewritePath=/category/(?<remaining>.*), /${remaining}
             - AuthenticationFilter
             
         - id: security-route
