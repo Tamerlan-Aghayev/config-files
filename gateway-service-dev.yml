@@ -9,14 +9,14 @@ spring:
           predicates:
             - Path=/book/**
           filters:
-            - name: AuthenticationFilter
+            - name: AuthenticationFilterFactory
 
         - id: category-route
           uri: lb://category-service
           predicates:
             - Path=/category/**
           filters:
-            - name: AuthenticationFilter
+            - name: AuthenticationFilterFactory
 
         - id: security-route
           uri: lb://security-service
