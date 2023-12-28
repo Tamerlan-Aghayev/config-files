@@ -10,7 +10,6 @@ spring:
             - Path=/book/**
           filters:
             - name: AuthenticationFilter
-              args:
 
         - id: category-route
           uri: lb://category-service
@@ -18,7 +17,6 @@ spring:
             - Path=/category/**
           filters:
             - name: AuthenticationFilter
-              args:
 
         - id: security-route
           uri: lb://security-service
